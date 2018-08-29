@@ -1,3 +1,3 @@
-# Teaching material for Spring 2018
+# Teaching mMaterial for Web Application Development
 
 This repository contains teaching materials for web application development.
