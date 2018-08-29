@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Create a User</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/javascripts/create_user.js"></script>
+</head>
+
+<body>
+  <h3>
+    <a href="/users">User List</a>
+  </h3>
+  <h1>Create New User</h1>
+  <table>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>
+          <input type="text" name="name" />
+        </td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>
+          <textarea name="address"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>Position</td>
+        <td>
+          <input type="text" name="position" />
+        </td>
+      </tr>
+      <tr>
+        <td>Salary</td>
+        <td>
+          <input type="number" name="salary" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button id="createButton">Create User</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
