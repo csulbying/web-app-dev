@@ -31,6 +31,14 @@ Go to [https://github.com](https://github.com) to create an account if you don't
 
 After downloading and installing git in your local computer, use `git config --global user.name "Mona Lisa"` to set up a global username for all your repositories. Use `$ git config --global user.email "email@example.com"` to set up an email for all your repositories.
 
-## 3 Git Introduction
-
 The [Git Introduction](./git-introduction.md) is a brief introduction to Git concepts and commonly used git commands. You should be familar with these concepts and commands to be a good developer.
+
+You can perform basic git functions such as add, commit, push and pull within VS Code IDE -- this is very convinient and simple.
+
+## Deploy Git Repository to Netlify
+
+[Netlify](https://www.netlify.com/) allows developers to host thier website for free. You don't even need an account to use it. Go to its website and login using you Github account.
+
+Click the `New site from Git` button and select your repository to be deployed. Usually you use the `master` branch. For a simple static webiste, leave the `Build Command` and `Publish directory` empty. You should have a `index.html` file as the home page for your site.
+
+Click the `Deploy site` to deploy your git repository. In one or two minutes, your site is up and running in the cloud and whenever you make a change to your github repository, the website is updated in minutes. So Cool !
