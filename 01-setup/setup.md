@@ -35,7 +35,7 @@ The [Git Introduction](./git-introduction.md) is a brief introduction to Git con
 
 You can perform basic git functions such as add, commit, push and pull within VS Code IDE -- this is very convinient and simple.
 
-## Deploy Git Repository to Netlify
+## 3 Deploy Git Repository to Netlify
 
 [Netlify](https://www.netlify.com/) allows developers to host thier website for free. You don't even need an account to use it. Go to its website and login using you Github account.
 
