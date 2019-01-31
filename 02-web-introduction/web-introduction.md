@@ -8,7 +8,7 @@ As a normal user, you use a browser to access a web site. Popular browsers are C
 
 You type a URL in an address bar in a browser, for example, "apple.com". You send an HTTP request to a web server. You can request different types of information such as a zip file. But normally you request an HTML file. The HTTP request is often a "GET" request. There are other request types such as "POST" to upload data and "DELETE" to delete some thing in the server.
 
-If the "GET" request goes well, the server response with an HTML file. Other things may be returned to the client too. One is CSS file -- the style of the web page. An HTML file has the content and structure. Another thing could be return is JavaScript code. The JavaScript has the interaction logic. CSS and JavaScript are optional.
+If the "GET" request goes well, the server response with an HTML file and other things. One thing could be a CSS file -- the style of the web page. Another thing could be return is JavaScript code. The JavaScript has the interaction logic. CSS and JavaScript are optional.
 
 Usually a web server need to store and retriev data from a database. To support many user access, the server can become very complicated.
 
@@ -18,10 +18,8 @@ In the response or preview of network, you can see the structure of an HTML file
 
 ```html
 <html>
-    <head>
-    </head>
-    <body>
-    </body>
+  <head> </head>
+  <body></body>
 </html>
 ```
 
@@ -30,6 +28,10 @@ The string inside angle bracket such as `html`, `head`, `body` are called tags a
 You can check the page details to see many elments that are marked with different tags. The web page also has tags for the assoicated CSS and JavaScript files.
 
 ## Setup Development Tools
+
+[Node.js](https://nodejs.org) is a JavaScript runtime that runs JavaScript directly in an operating system, i.e., outside a browser. In additon to run server side or clint JavaScript applications, it is often used to build and test JavaScript project. Please go to [Node.js](https://nodejs.org) to download and install the current version for your operating system.
+
+When you install Node.js, you install the JavaScript runtime engine and a package management tool called [npm](https://www.npmjs.com/). npm is the package manager for JavaScript and the world’s largest software registry. It can be used to install JavaScript libraries and tools.
 
 Run the command `npm install -g live-server` to install a live http server that automatically load a web page when there is a change. The `-g` option means that it is installed in a globe scope. You can use it anywhere in you command line because it is globally visible in the operating system.
 
@@ -72,37 +74,33 @@ Edit the `index.html` file to have the following content:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <header>
-        <h1>Mike's World</h1>
-    </header>
+  <body>
+    <header><h1>Mike's World</h1></header>
     <nav>
-        <ul>
-            <li>Home</li>
-            <li>Contact</li>
-        </ul>
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+      </ul>
     </nav>
     <main>
-        <p>My SF City Trip</p>
-        <p>The California Landscape</p>
-        <p>Image 1</p>
-        <p>Image 2</p>
-        <p>Do people like my Page</p>
+      <p>My SF City Trip</p>
+      <p>The California Landscape</p>
+      <p>Image 1</p>
+      <p>Image 2</p>
+      <p>Do people like my Page</p>
     </main>
     <footer>
-        <p>Image Max - Awesome page, great work, keep it up!</p>
-        <p>Image Manu - Looks really nice, beautiful pictures!</p>
+      <p>Image Max - Awesome page, great work, keep it up!</p>
+      <p>Image Manu - Looks really nice, beautiful pictures!</p>
     </footer>
-</body>
-
+  </body>
 </html>
 ```
 
@@ -127,38 +125,44 @@ The final code of the home `index.html` is as the following:
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Our First Webpage</title>
-        <link rel="shortcut icon" href="images/favicon.png">
-    </head>
-    <body>
-        <!--<p>I should not be displayed</p>-->
-        <header> <h1>Mike's World</h1> </header>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li><a href="contact/index.html">Contact</a></li>
-            </ul>
-        </nav>
-        <main>
-            <ul>
-                <li><p>My SF City Trip</p><div><img src="images/sf.png" alt="Image of the San Francisco streets"></div></li>
-                <li><p>The California Landscape</p><div><img src="images/california.png" alt="Image of the California streets"></div></li>
-            </ul>
-            <p>Do people like my Page</p>
-        </main>
-        <footer>
-            <div>
-                <img src="images/image-max.png" alt="Image of Max">
-                <span>Max - Awesome page, great work, keep it up!</span>
-            </div>
-            <div>
-                <img src="images/image-manu.png" alt="Image of Manu">
-                <span>Manu - Looks really nice, beautiful pictures!</span>
-            </div>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Our First Webpage</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+  </head>
+  <body>
+    <!--<p>I should not be displayed</p>-->
+    <header><h1>Mike's World</h1></header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li><a href="contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <ul>
+        <li>
+          <p>My SF City Trip</p>
+          <div><img src="images/sf.png" alt="Image of the San Francisco streets" /></div>
+        </li>
+        <li>
+          <p>The California Landscape</p>
+          <div><img src="images/california.png" alt="Image of the California streets" /></div>
+        </li>
+      </ul>
+      <p>Do people like my Page</p>
+    </main>
+    <footer>
+      <div>
+        <img src="images/image-max.png" alt="Image of Max" />
+        <span>Max - Awesome page, great work, keep it up!</span>
+      </div>
+      <div>
+        <img src="images/image-manu.png" alt="Image of Manu" />
+        <span>Manu - Looks really nice, beautiful pictures!</span>
+      </div>
+    </footer>
+  </body>
 </html>
 ```
 
