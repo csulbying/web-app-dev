@@ -106,11 +106,11 @@ Edit the `index.html` file to have the following content:
 
 If your code doesn't like neat, use the VS code auto-format function. Right click inside the edito window and click `Format Document`.
 
-## Dive Depper into HTML
+## Dive Deep into HTML
 
 You can use Chrome Development Tools to check and navigate the document structure. It clearly shows the above elments as block elements because each element is separated from other element in its own block -- a rectangle area of web page. Each block element starts in a new line. You can find the list of block-level element in the [MDN Block-level elements page](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements). An inline element doesn't start in a new line. The [MDN Inline element page](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements) has the list of all inline elements. Common inline elements include `<a>` for link element, `<img>` for image, `<cite>` for citation, `<code>` for program code, and `<span>` for generic inline element.
 
-Try to change the `<p>` elments in `<main>` to `<span>` element. You must change both the start and end tags to make it a correct web document. Check teh visual effect in Chrome Development Tools.
+Try to change the `<p>` element in `<main>` to `<span>` element. You must change both the start and end tags to make it a correct web document. Check teh visual effect in Chrome Development Tools.
 
 Make navigation list item to contain a link elment. Use `href` property to specify a hyper link. The `href` can be an abosulte path for external links or a relatvie path for local path.
 
