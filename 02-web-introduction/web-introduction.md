@@ -37,7 +37,7 @@ Run the command `npm install -g live-server` to install a live http server that 
 
 In you project foler that has html, css and JavaScript file, type `live-server` and it serves files from that directory.
 
-You should use IDE (Integrated Development Environment) to mange and edit your code respository. VS code is strong recommended because of its rich features. The desired features including syntax highlights, auto format, file organization, esay navigation, and much more.
+You should use IDE (Integrated Development Environment) to mange and edit your code respository. VS code is strongly recommended because of its rich features. The desired features including syntax highlights, auto format, file organization, esay navigation, and much more.
 
 A helpful feature is `files.autoSave`. Click the setting icon and search `files.autoSave`. Double click the line and set its value to `"onFocusChange"`. This makes the VS code automatically saves files when the editor windows loses focus.
 
@@ -104,7 +104,7 @@ Edit the `index.html` file to have the following content:
 </html>
 ```
 
-If your code doesn't like neat, use the VS code auto-format function. Right click inside the edito window and click `Format Document`.
+If your code doesn't have a neat look, use the VS code auto-format function. Right click inside the edito window and click `Format Document`.
 
 ## Dive Deep into HTML
 
