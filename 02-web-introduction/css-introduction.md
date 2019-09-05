@@ -6,7 +6,7 @@ As creating HTML documents, you should have a style design first before create s
 
 ## 1 CSS Syntax
 
-CSS styles are defines as rules. Essentially you use CSS to apply some styles to some elements. Therefore a rule has two parts: a list of **selectors** and a declaration block that contains one more more declarations separated by a semicolon. A selector selects one or more elements and a declaration gives the style to be applied. Please check the CSS-tricks article [how css selects work](https://css-tricks.com/how-css-selectors-work/) to get a good understanding.
+CSS styles are defined as rules. Essentially you use CSS to apply some styles to some elements. Therefore a rule has two parts: a list of **selectors** and a declaration block that contains one more more declarations separated by a semicolon. A selector selects one or more elements and a declaration gives the style to be applied. Please check the CSS-tricks article [how css selects work](https://css-tricks.com/how-css-selectors-work/) to get a good understanding.
 
 For example: `header { color: red; }`. The `header` is a selector that selects all `<header>` elements. A declartion consists of a property name and a value. In this example, the property is `color` and the value is `red`. A declaration should be terminated by a semicolon `;`. Inside the curly brackts, you can define multiple declarations separated by `;`.
 
@@ -16,12 +16,10 @@ To define embedded style, add a `<style>` element in the `<head>` section. For e
 
 ```html
 <style>
-
-header {
+  header {
     color: red;
-    background-color: #521751
-}
-
+    background-color: #521751;
+  }
 </style>
 ```
 
@@ -49,10 +47,10 @@ Try to add some styles to see the box model:
 
 ```css
 header {
-    /* ... other styles */
-    padding: 10px;
-    border: 5px dashed red;
-    margin: 10px;
+  /* ... other styles */
+  padding: 10px;
+  border: 5px dashed red;
+  margin: 10px;
 }
 ```
 
@@ -124,7 +122,7 @@ When setting `display: none;`, the `div` elements are invisible though their spa
 
 To display the navigation list items in a one line, you add a class to the `nav` element, `class="navigation"` and style `.navigation li { display: inline; }`. Now the nav elements are in one line. However, they have different width.
 
-To be able to set their width, change their style to `display: inline-block; width: 70px; background-color:  yellow;`. Now they have the same width with yellow background color.
+To be able to set their width, change their style to `display: inline-block; width: 70px; background-color: yellow;`. Now they have the same width with yellow background color.
 
 However, because the 2nd list item contains an anchor element, if you change anchor element style some where else, that style has higher priority. Try change `a` element style to `background-colr: red` to see the result. Therefore, we need to change the navigation selector to `.navigation li, .navigation a`. Then everything works as expected. The `.navigation a` selector is more specific, therefore has a higher priority, than the `a` selector.
 
