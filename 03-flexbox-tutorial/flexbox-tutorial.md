@@ -18,12 +18,12 @@ Create an HTML file with the following content:
 
 ```html
 <div class="parent">
-    <div class="div1">div1</div>
-    <div class="div2">w=150px</div>
-    <div class="div3">h=150px</div>
-    <div class="div4">w/h=150px</div>
-    <div class="div5">w=200px</div>
-    <div class="div6">w=200px</div>
+  <div class="div1">div1</div>
+  <div class="div2">w=150px</div>
+  <div class="div3">h=150px</div>
+  <div class="div4">w/h=150px</div>
+  <div class="div5">w=200px</div>
+  <div class="div6">w=200px</div>
 </div>
 ```
 
@@ -39,8 +39,8 @@ If you change the `display: flex` to `display: inline-flex` in the container, th
 
 Add the declaration `flex-flow: row nowrap;` to the container. The `flex-flow` is a combination of two properties: the `flex-direction` property and the `flex-wrap` property. Nothing changes in display because these are the default values for these two properties.
 
-* `row`: a value of `flex-direction` property, the flow direction is a row. The direction could be `column`, `row-reverse` and `column-reverse`.
-* `nowrap`: a value of `flex-wrap` property, the wrap behavior is to not wrap flex items into multiple lines if the width is not enough to hold them in one line. Other choices could be `wrap` and `wrap-reverse`.
+- `row`: a value of `flex-direction` property, the flow direction is a row. The direction could be `column`, `row-reverse` and `column-reverse`.
+- `nowrap`: a value of `flex-wrap` property, the wrap behavior is to not wrap flex items into multiple lines if the width is not enough to hold them in one line. Other choices could be `wrap` and `wrap-reverse`.
 
 Change the `nowrap` to `wrap` and change the width of the browser window. You can find that the flex items are wrapped if the width is not big enough to hold all contents. Also interesting is that the flex items in the same line have the same height as the highest item. For example, items to the left of "div3" element has the same height of `150px` that is defined in the "div3" element.
 
@@ -80,8 +80,8 @@ The `align-self` has the same values of `center`, `flex-start`, `flex-end`, and 
 
 The `flex` is a combination of `flex-grow`, `flex-shrink` and `flex-basis`. It has a default value of `0 1 auto`.
 
-* `flex-grow`: it is the weight of growth in the main axis. `0` means no grow. No zero values will take all available space together. A value of `2` grows two times faster than a value of `1`. For example, if two items share the extra `150px` available space, regardless of thier original size, the one with `flex-grow: 2` will take an extra `100px` and the one with `flex-grow: 1` will take an extra `50px`.
-* `flex-shrink`: it is the wight of shrink in the main axis. When parent shrinks, all items shrink to a minimum size that is just enough to wrap their contents. This value determines the speed of shrink, similar to `flex-grow`.
-* `flex-basis`: this defines the start/standard/default size of an item on the main axis. For row direction, this is the width. For column direction, this is the height. If the value is `auto`, it means use the element's height and width in the main axis. If it is another value, it overrides the width or height in the main axis. For example, add `flex: 0 1 100px` declaraion to "div6" element and play with the flex direction.
+- `flex-grow`: it is the weight of growth in the main axis. `0` means no grow. No zero values will take all available space together. A value of `2` grows two times faster than a value of `1`. For example, if two items share the extra `150px` available space, regardless of thier original size, the one with `flex-grow: 2` will take an extra `100px` and the one with `flex-grow: 1` will take an extra `50px`.
+- `flex-shrink`: it is the wight of shrink in the main axis. When parent shrinks, all items shrink to a minimum size that is just enough to wrap their contents. This value determines the speed of shrink, similar to `flex-grow`.
+- `flex-basis`: this defines the start/standard/default size of an item on the main axis. For row direction, this is the width. For column direction, this is the height. If the value is `auto`, it means use the element's height and width in the main axis. If it is another value, it overrides the width or height in the main axis. For example, add `flex: 0 1 100px` declaraion to "div6" element and play with the flex direction.
 
 [css-tricks-flexbox]: (https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
