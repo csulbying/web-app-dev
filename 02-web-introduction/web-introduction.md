@@ -55,7 +55,20 @@ VS code has a helpful feature called `code emmet` that helps to generate code wi
 
 Change the `<title>` element text to `<title>Our First Web Page</title>`.
 
-All contents should be inside the `<body>` element.
+All contents should be inside the `<body>` element. Now the file should have the following content:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Our First Webpage</title>
+  </head>
+  <body></body>
+</html>
+```
 
 ## Semantic Elements and Document Structure
 
@@ -69,39 +82,29 @@ Before you write an HTML page code, it's always a good idea to start with some s
 
 A common structure consists of `<header>` for page header, `<nav>` contains a set of navigation links, the `<main>` for main content and `<footer>` for page footer. In side the `<main>` you can have many `<article>`, `<section>`, and `<p>` elements. Side contents are put in `<aside>` elements.
 
-Edit the `index.html` file to have the following content:
+Edit the `index.html` file to have the following body content:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-
-  <body>
-    <header><h1>Mike's World</h1></header>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-    <main>
-      <p>My SF City Trip</p>
-      <p>The California Landscape</p>
-      <p>Image 1</p>
-      <p>Image 2</p>
-      <p>Do people like my Page</p>
-    </main>
-    <footer>
-      <p>Image Max - Awesome page, great work, keep it up!</p>
-      <p>Image Manu - Looks really nice, beautiful pictures!</p>
-    </footer>
-  </body>
-</html>
+<body>
+  <header><h1>Mike's World</h1></header>
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+  <main>
+    <p>My SF City Trip</p>
+    <p>The California Landscape</p>
+    <p>Image 1</p>
+    <p>Image 2</p>
+    <p>Do people like my Page</p>
+  </main>
+  <footer>
+    <p>Image Max - Awesome page, great work, keep it up!</p>
+    <p>Image Manu - Looks really nice, beautiful pictures!</p>
+  </footer>
+</body>
 ```
 
 If your code doesn't have a neat look, use the VS code auto-format function. Right click inside the edito window and click `Format Document`.
@@ -114,56 +117,68 @@ Try to change the `<p>` element in `<main>` to `<span>` element. You must change
 
 Make navigation list item to contain a link elment. Use `href` property to specify a hyper link. The `href` can be an abosulte path for external links or a relatvie path for local path.
 
-Try to create a subfolder called `contact` and create a `index.html` file there. To link to this file, use `<a href="contact/index.html">Contact</a>`.
-
-In the `contact/index.html` file, you can have a link as `<a href="../index.html">Home</a>` to link back to the home page.
-
-Create an `images` folder and Add images to the folder. Use the `<img>` to add image elment. It has a `src` property to link to an image file. It is always a good idea to provide a text description using `alt` property to an `<img>` elment because it meets the accessibility requirement. The code for an image link is like `<img src="images/california.pn" alt="Image of California">`.
-
-The final code of the home `index.html` is as the following:
+Try to create a subfolder called `contact` and create a `index.html` file there. In the `contact/index.html` file, you can have a link as `<a href="../index.html">Home</a>` to link back to the home page.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Our First Webpage</title>
-    <link rel="shortcut icon" href="images/favicon.png" />
   </head>
   <body>
-    <!--<p>I should not be displayed</p>-->
     <header><h1>Mike's World</h1></header>
     <nav>
       <ul>
-        <li>Home</li>
-        <li><a href="contact/index.html">Contact</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li>Contact</li>
       </ul>
     </nav>
-    <main>
-      <ul>
-        <li>
-          <p>My SF City Trip</p>
-          <div><img src="images/sf.png" alt="Image of the San Francisco streets" /></div>
-        </li>
-        <li>
-          <p>The California Landscape</p>
-          <div><img src="images/california.png" alt="Image of the California streets" /></div>
-        </li>
-      </ul>
-      <p>Do people like my Page</p>
-    </main>
-    <footer>
-      <div>
-        <img src="images/image-max.png" alt="Image of Max" />
-        <span>Max - Awesome page, great work, keep it up!</span>
-      </div>
-      <div>
-        <img src="images/image-manu.png" alt="Image of Manu" />
-        <span>Manu - Looks really nice, beautiful pictures!</span>
-      </div>
-    </footer>
   </body>
 </html>
+```
+
+In the home page, use `<a href="contact/index.html">Contact</a>` to link to the contact file.
+
+Create an `images` folder and add images to the folder. Use the `<img>` to add image elment. It has a `src` property to link to an image file. It is always a good idea to provide a text description using `alt` property to an `<img>` elment because it meets the accessibility requirement. The code for an image link is like `<img src="images/california.pn" alt="Image of California">`.
+
+The final code of the `index.html` body is as the following:
+
+```html
+<body>
+  <header><h1>Mike's World</h1></header>
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li><a href="contact/index.html">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <ul>
+      <li>
+        <p>My SF City Trip</p>
+        <div><img src="images/sf.png" alt="Image of the San Francisco streets" /></div>
+      </li>
+      <li>
+        <p>The California Landscape</p>
+        <div><img src="images/california.png" alt="Image of the California streets" /></div>
+      </li>
+    </ul>
+    <p>Do people like my Page</p>
+  </main>
+  <footer>
+    <div>
+      <img src="images/image-max.png" alt="Image of Max" />
+      <span>Max - Awesome page, great work, keep it up!</span>
+    </div>
+    <div>
+      <img src="images/image-manu.png" alt="Image of Manu" />
+      <span>Manu - Looks really nice, beautiful pictures!</span>
+    </div>
+  </footer>
+</body>
 ```
 
 As shown above, `<div>` is used to group some elments into a generic block elment. You can investigate and navigate the document structure using Chrome Development tools.
