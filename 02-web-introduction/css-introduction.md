@@ -27,13 +27,29 @@ Then you might be wondering what are the style properties and what are thier val
 
 ## 2 More Styles
 
-To change the text size of an element, use `font-size` property. To change `<h1>` text size and color, use `h1 { font-size: 20px; color: white;}`. Because the `<h1>` element is inside the `<header>` element, the more specific style has higher priority than those defined with `header` selector, therefore the `<h1>` has a yellow color. You can remove the `color: red;` in the `header` rule.
+To change the text size of an element, use `font-size` property. To change `<h1>` text size and color, use `h1 { font-size: 20px; color: white;}`. Because the `<h1>` element is inside the `<header>` element, the more specific style has higher priority than those defined with `header` selector, therefore the `<h1>` has a yellow color. Please remove the `color: red;` in the `header` rule.
 
-To remove the underline of an anchor link, use `a { text-decorator: none; }`.
+To remove the underline and set a black color of an anchor link, use `a { text-decoration: none; color: black;}`. Now the embedded styles are as the following:
+
+```html
+<style>
+  header {
+    background-color: #521751;
+  }
+  h1 {
+    font-size: 20px;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+</style>
+```
 
 Embedded styles has three main disadvantages: first, it makes the HTML file bigger and harder to manage; second, every time you want to change a style, you need to edit the HTML file even nothing is changed in HTML content. Third, the styles are only applied to the embedding file.
 
-A better approach is to use external style files. Create a style file `style.css` in the project root folder. Then cut and paste all styles inside the `style` element to this file. To link the exteranl style file to the HTML file, create a `link` element like `<link rel="styleshteet" href="style.css">`. Also create a link element in the `contact/contact.html`. In this file it is `<link rel="styleshteet" href="../style.css">` -- pay attention to the relative path in the `href` property.
+A better approach is to use external style files. Create a style file `style.css` in the project root folder. Then cut and paste all styles inside the `style` element to this file. To link the exteranl style file to the HTML file, create a `link` element like `<link rel="styleshteet" href="style.css">`. Also create a link element in the `contact/index.html`. In this file it is `<link rel="styleshteet" href="../style.css">` -- pay attention to the relative path in the `href` property.
 
 ## 3 Box Model
 
@@ -64,7 +80,23 @@ Becuase the `<header>` element only has one `<h1>` element, it is reasonable to 
 
 Now delete `font-size`, `border` and `margin`. Change padding as `padding: 10px`. Checking the box model in Chrome Development Tools, you can find there are still margins in the top and bottom of the `<h1>` element. These margins are added by browser's default style. To remove the margins, add `margin: 0` declaration.
 
-To specify a background for the whole document, add `html { background-color: grey;}` to the style file.
+To specify a background for the whole document, add `html { background-color: grey;}` to the style file. Then change it to use a `rgb(236, 236, 236)`. Now the style file is as the following:
+
+```css
+header {
+  background-color: rgb(236, 236, 236);
+}
+h1 {
+  background-color: #521751;
+  padding: 10px;
+  color: white;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+```
 
 ## 4 Classes
 
