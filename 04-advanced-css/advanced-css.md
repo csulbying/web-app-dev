@@ -4,6 +4,8 @@ This section adds more CSS styles to your web page.
 
 ## 1 Flexbox
 
+This is based on the [Flexbox Youtube video](https://youtu.be/vgNW-uuVUYo).
+
 Two inline-block elements have a gap between them. Therefore, even each element takes 50% of the width, they are still displayed in two lines. Flexbox can solve this issue easily.
 
 Remove the `display: inline-block`, the two main text paragraphs should be in one line. Add `background-color: purple; color: white;` to the `trip-text p` selector to see the effect. Add `text-align: center` to center the text.
