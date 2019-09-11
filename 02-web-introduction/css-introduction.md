@@ -100,13 +100,13 @@ a {
 
 ## 4 Classes
 
-Now move the two paragraph in the main section into a "div" element. Delete the "ul" and "li" elements.
+Now move the two paragraph in the main section into a "div" element. Move the two images into another "div" element. Delete the "ul" and "li" elements.
 
 When you use the tag selector such as `div { background-color: #fa923f; }` the style is applied to all `<div>` element. If this is not what you want, use class to mark the elment that you want to apply the style. Add `class="triptext"` to the target elment and define a rule like this: `.triptext { background-color: #fa923f; padding: 3px; }`. The `.classname` matches all element that has a `class="classname"` property. An element can have multiple classes.
 
 To specify a selector that is embeded in another selector, use `selector1 selctor2` syntax. It means `selector2` selected elements should be embeded in the `selector1` selected element. The `embeded` means the an elment is a child or a child's child and so on so forth of the outside element.
 
-Add `.triptext p { background-color: white}`, you can see the only paragraphs inside the elment with a `triptext` class are white.
+Add `.triptext p { background-color: white}`, you can see that only paragraphs inside the elment with a `triptext` class are white. Add `margin: 0;` to remove the margin between the two paragraphs.
 
 Add class `tripimages` to the "div" element containing the two images.
 
@@ -138,17 +138,17 @@ The [CSS-Trick](https://css-tricks.com/almanac/properties/p/position/) has detai
 
 ### 6.1 Theory
 
-The display property allows you to change the flow layout of an element. Commons values are `block`, `inline`, `inline-block`, and `none`. The [MDN display doc] has the completed list of all values.
+This is explained in a [Youtube video](https://youtu.be/YS2bTVYBoK8) with [GitHub source code](https://github.com/academind/web-development-beginners-guide/tree/06.01-css-display-theory).
 
-Use the [theory project](https://github.com/academind/web-dev-beginners-guide/tree/06-css-display-theory) as a start, add `display: block;` to `div` element has no effect at all. The reason is that it is the default display style for a `div` element.
+The display property allows you to change the flow layout of an element. Commons values are `block`, `inline`, `inline-block`, and `none`. The [MDN display doc](https://developer.mozilla.org/en-US/docs/Web/CSS/display) has the completed list of all values.
 
-A block element can have a `width` property and a `height` property. Try add a width property as `width: 100px;`. The width of all `div` elements is changed.
+A block element can have a `width` property and a `height` property.
 
-If you change its display style to `inline`, then all three `div` elements are displayed in one line with a width that is just enough to wrap their content. An `inline` element doesn't have a `width` property and a `height` property.
+If you change display style to `inline`, then elements are displayed in one line with a width that is just enough to wrap their content. An `inline` element doesn't have a `width` property and a `height` property.
 
 How could we make these inline elements to have width? the answer is to change their styles to `display: inline-block`. Now they can have both `height` and `width` properties.
 
-When setting `display: none;`, the `div` elements are invisible though their spaces are reserved in the page flow.
+When setting `display: none;`, the elements are invisible though their spaces are reserved in the page flow.
 
 ### 6.2 Web Site
 
@@ -163,3 +163,119 @@ To center the navigation, add `.navigation { text-align: center; }` to center al
 To associate the main trip text with their images, add the style `.trip-text p { display: inline-block; width: 50% }`. Also set `.trip-text { padding: 0}` to remove paddings. However, `50%` doesn't work because there is a gap between the two inline block elements. This issue can be solved easily with `display: flex` style.
 
 To align footer texts and their images, add a class to the footer `div` elements a class `class="review-clients`. Then add style `.review-clients p, .review-clients img { display: inline }`. The text and its image are in one line. To make them vertical aligned, add `vertical-align: middle;` to the style.
+
+## Project Code
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Our First Webpage</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="fixed-bar"><h1 class="page-title">Mike's World</h1></header>
+    <nav>
+      <ul class="navigation">
+        <li>Home</li>
+        <li><a href="contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="trip-text">
+        <p>My SF City Trip</p>
+        <p>The California Landscape</p>
+      </div>
+      <div class="trip-images">
+        <img src="images/sf.png" alt="Image of the San Francisco streets" />
+        <img src="images/california.png" alt="Image of the California streets" />
+      </div>
+      <p class="feedback">Do people like my Page</p>
+    </main>
+    <footer>
+      <div class="review-clients">
+        <img src="images/image-max.png" alt="Image of Max" />
+        <p>Max - Awesome page, great work, keep it up!</p>
+      </div>
+      <div class="review-clients">
+        <img src="images/image-manu.png" alt="Image of Manu" />
+        <p>Manu - Looks really nice, beautiful pictures!</p>
+      </div>
+    </footer>
+  </body>
+</html>
+```
+
+```css
+html {
+  background-color: rgb(236, 236, 236);
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  background-color: red;
+}
+
+/*header*/
+
+.fixed-bar {
+  height: 70px;
+}
+.page-title {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #521751;
+  color: white;
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+}
+
+/*nav*/
+.navigation {
+  text-align: center;
+  padding: 0;
+}
+
+.navigation li,
+.navigation a {
+  display: inline-block;
+  width: 70px;
+  background-color: rgb(177, 177, 174);
+}
+
+/*main*/
+.trip-text {
+  background-color: #fa923f;
+  padding: 0;
+}
+
+.trip-text p {
+  background-color: white;
+  margin: 0;
+  display: inline-block;
+  width: 50%;
+}
+
+.feedback {
+  background-color: #521751;
+  color: white;
+  text-align: center;
+}
+
+/*footer*/
+.review-clients p,
+.review-clients img {
+  display: inline;
+  vertical-align: middle;
+}
+```
