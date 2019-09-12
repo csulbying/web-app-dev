@@ -8,7 +8,7 @@ This is based on the [Flexbox Youtube video](https://youtu.be/vgNW-uuVUYo).
 
 Two inline-block elements have a gap between them. Therefore, even each element takes 50% of the width, they are still displayed in two lines. Flexbox can solve this issue easily.
 
-Remove the `display: inline-block`, the two main text paragraphs should be in one line. Add `background-color: purple; color: white;` to the `trip-text p` selector to see the effect. Add `text-align: center` to center the text.
+To display the trip text in the same row, add `.trip-trip-text { display: flex;}` to turn their parent element into a flex container. The nested elements are flex items. Remove the `display: inline-block` in `.trip-text p`, the two main text paragraphs should be in one line. Add `background-color: purple; color: white;` to the `trip-text p` selector to see the effect. Add `text-align: center` to center the text.
 
 To display the images in the same row, add `.trip-images { display: flex;}` to turn their parent element into a flex container. Now they are in the same row.
 
@@ -62,7 +62,7 @@ Add `<meta name="viewport" content="width=device-width">` to the "head" element 
 
 To make the page looks better in a mobile devices, change the main image width to `100%` and remove the min-width property. Change the navigation text to `font-size: 0.9rem;`.
 
-If you want to display a bigger navigation text in a bigger screen, use media queries like `@media (min-width: 400px){ .navigation li { font-size: 1.2rem } }`. If you don't want to display main trip texts in a small device, comment out trip text styles and add `.trip-text { display: none; }` inside the media query.
+If you want to display a bigger navigation text in a bigger screen, use media queries like `@media (min-width: 400px){ .navigation li { font-size: 1.2rem } }`. If you don't want to display main trip texts in a small device, comment out trip text styles for `.trip-text` and `.trip-text p` and add `.trip-text { display: none; }` inside the media query.
 
 The `min-width: 400px` is called a break point. If you want to display the trip images side by side for a large screen, add the declaration: `@media (min-width: 700px){ .trip-images img { width: 50% } }`. Also copy the commented trip text to this media query to make them visible ang aligned with their corresponding images.
 
