@@ -8,7 +8,7 @@ This is based on the [Flexbox Youtube video](https://youtu.be/vgNW-uuVUYo).
 
 Two inline-block elements have a gap between them. Therefore, even each element takes 50% of the width, they are still displayed in two lines. Flexbox can solve this issue easily.
 
-To display the trip text in the same row, add `.trip-trip-text { display: flex;}` to turn their parent element into a flex container. The nested elements are flex items. Remove the `display: inline-block` in `.trip-text p`, the two main text paragraphs should be in one line. Add `background-color: purple; color: white;` to the `trip-text p` selector to see the effect. Add `text-align: center` to center the text.
+To display the trip text in the same row, add `.trip-text { display: flex;}` to turn their parent element into a flex container. The nested elements are flex items. Remove the `display: inline-block` in `.trip-text p`, the two main text paragraphs should be in one line. Add `background-color: purple; color: white;` to the `trip-text p` selector to see the effect. Add `text-align: center` to center the text.
 
 To display the images in the same row, add `.trip-images { display: flex;}` to turn their parent element into a flex container. Now they are in the same row.
 
