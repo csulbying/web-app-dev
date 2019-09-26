@@ -91,7 +91,27 @@ The Youtube video [Visual Studio Code Intro & Setup](https://youtu.be/fnPhJHN0jT
 
 Go to [https://code.visualstudio.com/download](https://code.visualstudio.com/download) to download it for your operating systems.
 
-You can perform basic git functions such as commit, push and pull within VS Code IDE -- this is much easy. The first time you use the git operation, VS Code will prompt you for your GitHub account name and password.
+You can perform basic git functions such as commit, push and pull within VS Code IDE -- this is much easy. The workflow now becomes the following:
+
+### Step 1: Create a Github Repository
+
+Create a new repository in Github. To add an appropriate `.gitignore` file, please select the "Node". Optionally, you can select a license to add a license copyright file and create a `README` file.
+
+### Step 2: Clone the Github Repository
+
+In your Github repoistory page, you can find the url. In your computer, open a terminal (or `cmd` or `power shell` window in Windos),use `git clone remote-repository-url` to clone the github repository to a folder in your local computer. The command will create a new folder named after the repository name.
+
+### Step 3: Use VS Code to open the cloned folder
+
+Use VS code IDE to open the cloned folder. Then work on this local repostiory. You can add new files, change existing files or delete unused files and the VS code shows the number of changed files.
+
+### Step 4: Stage and Commit Changes
+
+To stage and commit chagnes, click the VS code source control icon, the IDE is in source control mode. type in commit message and press enter to commit the changes. If it is the first, VS Code will ask you to confirm stage all changes, select `Always` stage changes and confirm the commit.
+
+### Step 5: Push to Github Repository
+
+When you click the source control icon, the IDE is in source control mode. Click the `...` icon on the top and it displays a list of source control commands, select `Push` to push the changes to GitHub repository. The first time you use the git operation, VS Code will prompt you for your GitHub account name and password.
 
 ## 3 Deploy Git Repository to Netlify
 
