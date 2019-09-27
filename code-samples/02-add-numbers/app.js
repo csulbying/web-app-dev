@@ -3,7 +3,7 @@ const num1Input = document.getElementById('num1')
 const num2Input = document.getElementById('num2')
 const output = document.getElementById('output')
 
-addBtn.addEventListener('click', addNumber)
+addBtn.addEventListener('click', addNumbers)
 
 function addNumbers() {
   const num1String = num1Input.value
