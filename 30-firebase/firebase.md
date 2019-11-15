@@ -1,6 +1,6 @@
 # Firebase
 
-[Firebase](https://firebase.google.com/) is a comprehensive app development platform that include data storage, authentication, analytics, monitoring and many cloud services. In this tutorial you will use the [Cloud Firebase](https://firebase.google.com/products/firestore/) for data storage and access, as well as its hosting service.
+[Firebase](https://firebase.google.com/) is a comprehensive app development platform that include data storage, authentication, analytics, monitoring and many cloud services. In this tutorial you will use the [Cloud Firestore](https://firebase.google.com/products/firestore/) for data storage and access, as well as its hosting service.
 
 This tutorial is based on the [Firebase web Doc](https://firebase.google.com/docs/web/).
 
