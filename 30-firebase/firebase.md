@@ -31,7 +31,7 @@ Step 4, as instructed, "Copy and paste these scripts into the bottom of your `<b
 <script src="/__/firebase/init.js"></script>
 ```
 
-Step 5, Install Firebase CLI. Run `npm install -g firebase-tools`.
+Step 5, Install Firebase CLI. Run `npm install -g firebase-tools`. You need to install node.js first to use npm. Here is the [node.js download link](https://nodejs.org/en/download/).
 
 Step 6, Deploy to Firebase Hosting. In your local web applicaiton root, run `firebase login` to login first. Sometime you need to run `firebase login --reauth` to refresh login status.
 
