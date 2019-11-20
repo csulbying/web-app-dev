@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello Firebase</h1>
+    <div id="myDIV" class="header">
+      <h2>My To Do List</h2>
+      <input type="text" id="myInput" placeholder="Todo task..." />
+      <span class="addBtn" id="addBtn">Add</span>
+    </div>
 
-    <h2>Discussion</h2>
-
-    <form id="leave-message">
-      <label>Leave a message: </label>
-      <input type="text" id="message" />
-      <button type="submit">Submit</button>
-    </form>
+    <ul id="myUL">
+      <!-- todo list items -->
+    </ul>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/7.3.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.4.0/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use -->
-    <script src="/__/firebase/7.3.0/firebase-firestore.js"></script>
+    <!-- use firestore database -->
+    <script src="/__/firebase/7.4.0/firebase-firestore.js"></script>
 
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
