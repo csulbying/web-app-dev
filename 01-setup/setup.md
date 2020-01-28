@@ -6,7 +6,7 @@ A professional web developer uses many tools to improve productivity and softwar
 - Visual Studio Code (VS Code): the IDE to edit/run/debug code.
 - Netlify: the cloud service that hosts your websites.
 
-You should use VS Code to write code locally. Then push code to Github and deploy to Netlify.
+You should use VS Code to write code locally. Then commit and push code to Github to keep coding history. You can deploy to Netlify or other cloud hosting service from your Github repository.
 
 The following sections give a detail description of installation and setup of required software.
 
@@ -20,15 +20,13 @@ GitHub is a cloud service that hosts Git repositories. Saving your repositories 
 
 First of all, please go to [https://github.com](https://github.com) to create an account if you don't have one. You can create GitHub repositories using your account.
 
-Then go to [https://git-scm.com/downloads](https://git-scm.com/downloads) to download and install the latest version of Git. run `git --version` to verify the installation.
+Then go to [https://git-scm.com/downloads](https://git-scm.com/downloads) to download and install the latest version of Git. In you command line interface (CLI), run `git --version` to verify the installation. The CLI in Windows is `cmd` or `power shell`, the CLI in Mac is a terminal.
 
 After downloading and installing git in your local computer, use `git config --global user.name "Your Name"` to set up a global username for all your repositories. Use `$ git config --global user.email "YourEmail@any.com"` to configure an email for your repositories.
 
 ### 1.2 Basic Git Concepts
 
-Git keeps a history of your software changes by taking snapshots and store them in a `.git` directory of you project root folder. You decide when to take a snapshot by issuing a `git commit` command. Git keeps all commit history and you can access any snapshot when you want.
-
-Before committing changes, you can specify which files to be committed using `git add` command to **stage** file changes. The staging area is also called **cache** or **index**.
+Git keeps a history of your software changes by taking snapshots and store them in a `.git` directory of you project root folder. you can specify which files to be managed by a repository using `git add` command to **stage** file changes. The staging area is also called **cache** or **index**. You decide when to take a snapshot by issuing a `git commit` command. Git keeps all commit history and you can access any snapshot when you want.
 
 ![git add commit](images/git-add-commit.png)
 
@@ -47,7 +45,7 @@ Create a `.gitignore` file in your project root folder (the folder where `.git` 
 
 ### 1.4 A New Project Workflow
 
-#### Step 1: Create a Github Repository
+#### Step 1: Create a Repository
 
 If you create a new repository in Github, please select the right project type to add an appropriate `.gitignore` file. Optionally, you can select a license to add a license copyright file.
 
@@ -85,21 +83,36 @@ use `git pull` to pull changes from remote repository made by other developers.
 
 ## 2 Install VS Code
 
-VS Code is a free, open source, simple, and powerful Integrated Development Environment (IDE) for web application development. It has many plugins that provide many functions in addition to its core features. It has built-in support for Git.
-
-The Youtube video [Visual Studio Code Intro & Setup](https://youtu.be/fnPhJHN0jTE) is an introduction to basic VS Code tasks.
+VS Code is a free, open source, simple, and powerful Integrated Development Environment (IDE) for web application development. It has many plugins that provide many functions in addition to its core features. It supports many operating systems and has built-in support for Git.
 
 Go to [https://code.visualstudio.com/download](https://code.visualstudio.com/download) to download it for your operating systems.
 
-You can perform basic git functions such as commit, push and pull within VS Code IDE -- this is much easy. The workflow now becomes the following:
+The Youtube video [Visual Studio Code Intro & Setup](https://youtu.be/fnPhJHN0jTE) is an introduction to basic VS Code tasks. Some highlights of the video are:
+
+- Use Command Palette (F1) to find any command. For example, in Mac, type `shell command` to find the `Shell Command: Install 'code' comand in PATH` command, click it and restart the terminal to run `code` from a terminal.
+- Unlike the video, you change the settings directly. The recommended settings are
+  - Auto Save: onFocusChange
+  - Tab Size: 2
+  - Word Wrap: on
+- Familiar with the commonly used keyboard shortcuts.
+- Know the code emmit such as `.class`, `#id`, `li*4`, `!+Tab` etc.
+- Suggested Extensions
+  - Bracket Pair Colorizer 2: colors for barcket pairs
+  - VSCode-Icons: icons for different file types
+  - Path Intellisense: auto complete of file paths
+  - ESLint: check JavaScript syntax
+
+## 3 Recommended Git Workflow with VS Code
+
+You can perform basic git functions such as commit, push and pull within VS Code IDE -- this is much easy. The late part of  [the VS Code video](https://youtu.be/fnPhJHN0jTE?t=1912) shows the Git operations built into the VS Code. The workflow now becomes the following:
 
 ### Step 1: Create a Github Repository
 
 Create a new repository in Github. To add an appropriate `.gitignore` file, please select the "Node". Optionally, you can select a license to add a license copyright file and create a `README` file.
 
-### Step 2: Clone the Github Repository
+### Step 2: Clone the Repository
 
-In your Github repoistory page, you can find the url. In your computer, open a terminal (or `cmd` or `power shell` window in Windos),use `git clone remote-repository-url` to clone the github repository to a folder in your local computer. The command will create a new folder named after the repository name.
+In your Github repoistory page, you can find the url. In your computer, open a terminal (`cmd` or `power shell` in Windows), use `git clone remote-repository-url` to clone the github repository to a folder in your local computer. The command will create a new folder named after the repository name.
 
 ### Step 3: Use VS Code to open the cloned folder
 
@@ -113,9 +126,9 @@ To stage and commit chagnes, click the VS code source control icon, the IDE is i
 
 When you click the source control icon, the IDE is in source control mode. Click the `...` icon on the top and it displays a list of source control commands, select `Push` to push the changes to GitHub repository. The first time you use the git operation, VS Code will prompt you for your GitHub account name and password.
 
-## 3 Deploy Git Repository to Netlify
+## 4 Deploy Git Repository to Netlify
 
-[Netlify](https://www.netlify.com/) allows developers to host thier website for free. You don't even need an account to use it. Go to its website and login using you Github account.
+[Netlify](https://www.netlify.com/) allows developers to host thier website for free. You don't even need an extra account to use it. Go to its website and login using you Github account.
 
 Click the `New site from Git` button and select your repository to be deployed. Usually you use the `master` branch. For a simple static webiste, leave the `Build Command` and `Publish directory` empty. You should have a `index.html` file as the home page for your site.
 
