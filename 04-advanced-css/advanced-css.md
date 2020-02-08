@@ -4,7 +4,7 @@ This section adds more CSS styles to your web page.
 
 ## 1 Flexbox
 
-This is based on the [Flexbox Youtube video](https://youtu.be/vgNW-uuVUYo).
+This is based on the [Flexbox Youtube video](https://www.youtube.com/playlist?list=PL55RiY5tL51rv_vo3TM3Byu71RYchX_l_).
 
 Two inline-block elements have a gap between them. Therefore, even each element takes 50% of the width, they are still displayed in two lines. Flexbox can solve this issue easily.
 

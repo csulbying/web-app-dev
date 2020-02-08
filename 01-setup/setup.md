@@ -101,6 +101,7 @@ The Youtube video [Visual Studio Code Intro & Setup](https://youtu.be/fnPhJHN0jT
   - VSCode-Icons: icons for different file types
   - Path Intellisense: auto complete of file paths
   - ESLint: check JavaScript syntax
+  - Live Server: a web server that auto-refresh page when there is a change
 
 ## 3 Recommended Git Workflow with VS Code
 
