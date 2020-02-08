@@ -1,8 +1,8 @@
 # CSS Introduction
 
-CSS is an abbreviation of Cascading Style Sheet. Because HTML document has a tree structure, some styles are applied top-down in a cascading way. Cascading also means a later style overrides previous styles.
+CSS is an abbreviation of Cascading Style Sheet. Because HTML document has a tree structure, some styles are applied top-down in a cascading way. Cascading also means a later style overrides previous styles. As creating HTML documents, you should have a style design first before create styles.
 
-As creating HTML documents, you should have a style design first before create styles.
+This is based on the [Flexbox Youtube video](https://www.youtube.com/playlist?list=PL55RiY5tL51rv_vo3TM3Byu71RYchX_l_).
 
 ## 1 CSS Syntax
 

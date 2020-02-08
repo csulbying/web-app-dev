@@ -1,6 +1,6 @@
 # Web Introduction
 
-In this chapter we introduct the baic web concepts.
+In this chapter we introduct the baic web concepts. This is based on the [Flexbox Youtube video](https://www.youtube.com/playlist?list=PL55RiY5tL51rv_vo3TM3Byu71RYchX_l_).
 
 ## How Does the Web Work
 
